@@ -5,12 +5,12 @@
 
 Console.Clear();
 
-Console.Write("Введите любое целое число : ");         //Запрашиваем данные.
-string num = Console.ReadLine().Trim();                //Вводим число.
+Console.Write("Введите любое целое число: ");          //Запрашиваем данные.
+string num = Console.ReadLine()!.Trim();               //Вводим число.
 while(num == "")                                       //Проверяем что пользователь не забыл ввести данные
 {                                                      //или не нажал пробел.
     Console.Write("Введите любое целое число : ");     //Снова запрашиваем данные.
-    num = Console.ReadLine().Trim();                   //Снова пытаемся ввести число.
+    num = Console.ReadLine()!.Trim();                  //Снова пытаемся ввести число.
 }
 int number = int.Parse(num);
 string text;
