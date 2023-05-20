@@ -4,13 +4,26 @@
 //a = -9 b = -3 -> max = -3
 Console.Clear();
 
-Console.Write("Введите первое число для сравнения: ");
-int number1 = int.Parse(Console.ReadLine());//Вводим первое число
+Console.Write("Введите первое число для сравнения: ");        //Запрашиваем данные
+string num1 = Console.ReadLine();                             //Вводим первое число
+while(num1 == "")                                             //Проверяем что пользователь не забыл ввести данные
+{
+    Console.Write("Введите первое число для сравнения: ");    //Снова запрашиваем данные
+    num1 = Console.ReadLine();                                //снова пытаемся ввести первое число
+}
+int number1 = int.Parse(num1);                                //Парсим строковое значение в int
 
-Console.Write("Введите второе число для сравнения: ");
-int number2 = int.Parse(Console.ReadLine());//Вводим второе число
 
-if(number1 > number2)  //Сравниваем числа
+Console.Write("Введите второе число для сравнения: ");        //Запрашиваем данные
+string num2 = Console.ReadLine();                             //Вводим второе число
+while(num2 == "")                                             //Проверяем что пользователь не забыл ввести данные
+{
+    Console.Write("Введите второе число для сравнения: ");    //Снова запрашиваем данные
+    num2 = Console.ReadLine();                                //снова пытаемся ввести второе число
+}
+int number2 = int.Parse(num2);                                //Парсим строковое значение в int
+
+if(number1 > number2)                                         //Сравниваем числа
 {
     Console.WriteLine($"Число {number1} > числа {number2}");  //Выводим результат если number1 > number2
 }
